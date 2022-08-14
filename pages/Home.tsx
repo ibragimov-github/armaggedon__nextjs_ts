@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
   }
 }
 
-function index({ destroyList, setDestroyList }: Iindex) {
+function Home({ destroyList, setDestroyList }: Iindex) {
   const child3Ref = useRef(null);
   const child3RefValue = useOnScreen(child3Ref);
   const [isChild3Ref, setIsChild3Ref] = useState(false);
@@ -150,4 +150,4 @@ function index({ destroyList, setDestroyList }: Iindex) {
   );
 }
 
-export default index;
+export default Home;
