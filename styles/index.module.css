@@ -1,0 +1,103 @@
+.container {
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.wrapper {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.wrapper h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.separation {
+  width: 100%;
+  height: 1px;
+  background-color: #D7D7D7;
+  margin: 8px 0 8px 0;
+}
+
+.mode {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  width: 100%;
+  max-height: 386px;
+  overflow-y: auto;
+  display: grid;
+}
+
+
+
+.mode span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mode span button {
+  text-decoration: underline;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mode-active {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.checkbox-container {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-container label {
+  font-size: 16px;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+
+  .wrapper {
+    width: 940px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 999.99px) {
+  .container {
+    width: 320px;
+  }
+
+  .wrapper {
+    width: 288px;
+  }
+
+  .mode {
+    flex-direction: column;
+  }
+
+  .mode .checkbox-container {
+    margin-top: 10px;
+  }
+
+  .card-container {
+    height: calc(100% - 32px);
+    grid-template-columns: 1fr;
+  }
+}
