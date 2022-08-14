@@ -28,7 +28,7 @@ function ItemCard({ name, danger, date, diameter, distance,
   const [stateButton, setStateButton] = useState(false);
   const meteorDestroyer = () => {
     setStateButton(true)
-    setDestroyList([...destroyList, {name}])
+    setDestroyList([...destroyList, name])
   }
   const handleClickOpen = () => {
     setOpen(true);

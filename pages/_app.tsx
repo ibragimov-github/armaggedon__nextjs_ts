@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [destroyList, setDestroyList] = useState([1, 2])
+  const [destroyList, setDestroyList] = useState([])
   return (
     <Layout>
       <Component
