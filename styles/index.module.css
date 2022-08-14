@@ -34,6 +34,7 @@
   max-height: 386px;
   overflow-y: auto;
   display: grid;
+  grid-gap: 32px
 }
 
 
@@ -56,14 +57,14 @@
 }
 
 .checkbox-container {
-  width: 210px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
 }
-
-.checkbox-container label {
+.label span {
   font-size: 16px;
 }
+
 
 @media (min-width: 1000px) {
   .container {
