@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
 }
 
 function index({ destroyList, setDestroyList }: Iindex) {
-  const child3Ref = useRef<HTMLDivElement>(null);
+  const child3Ref = useRef(null);
   const child3RefValue = useOnScreen(child3Ref);
   const [isChild3Ref, setIsChild3Ref] = useState(false);
   const [data, setData] = useState([]);
@@ -56,7 +56,8 @@ function index({ destroyList, setDestroyList }: Iindex) {
     ${first}&end_date=${second}&api_key=${APIKey}`
     axios.get(request).then((results): any => {
       const dataArray: any = Object.entries(results.data.near_earth_objects).reverse()
-      setData([...data, ...Array.from(dataArray)])
+      const newData = Object.assign([], [...data, ...Array.from(dataArray)])
+      setData(newData)
       setIsChild3Ref(false)
     })
   }
@@ -79,10 +80,10 @@ function index({ destroyList, setDestroyList }: Iindex) {
         <div className={styles.separation}></div>
         <div className={styles.mode}>
           <span>Отображать расстояние: <button
-            className={distanceVariant === 'km' ? styles['mode-active'] : null}
+            className={distanceVariant === 'km' ? styles['mode-active'] : ''}
             onClick={() => setDistanceVariant('km')}
           >в километрах</button> | <button
-            className={distanceVariant === 'mo' ? styles['mode-active'] : null}
+            className={distanceVariant === 'mo' ? styles['mode-active'] : ''}
             onClick={() => setDistanceVariant('mo')}
           >в лунных орбитах</button></span>
           <div className={styles['checkbox-container']}>

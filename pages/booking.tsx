@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../styles/booking.module.css';
-import { v4 } from 'uuid';
 import { Fab } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import WhatshotIcon from '@mui/icons-material/Whatshot'; interface Ibooking {
@@ -31,7 +30,7 @@ function booking({ destroyList, setDestroyList }: Ibooking) {
           <div className={styles['name-container']}>
             {destroyList.map((el: any) => {
               return (
-                <span>{el}</span>
+                <span key={el.id}>{el.name}</span>
               )
             })}
           </div>
