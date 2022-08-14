@@ -26,7 +26,7 @@ function Header({ }) {
           <h3>Сервис заказа уничтожения астероидов, опасно подлетающих к Земле.</h3>
         </div>
         <nav className={styles.nav}>
-          <Link href="/">
+          <Link href="/Home">
             <a className={pathname === '/' ? styles.active : ''}>Астероиды</a>
           </Link>
           <Link href="/booking">
